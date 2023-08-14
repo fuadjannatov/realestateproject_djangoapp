@@ -1,5 +1,6 @@
 import pickle
 import numpy as np
+import pandas as pd
 
 def getPrediction(floor, highestfloor, area, rooms,  document, renovation, subway):
     model = pickle.load(open('model_gbr.pkl', 'rb'))
@@ -26,6 +27,6 @@ def getPrediction(floor, highestfloor, area, rooms,  document, renovation, subwa
     new_data_point = np.array(new_data_point).reshape(1,-1)
 
     prediction = model.predict(new_data_point)
-    result = f'The predicted price is {prediction}'
+    result = f'The predicted price is  {prediction}'
 
     return result
