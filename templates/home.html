@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <h1 style= “color:blue”>Apartment Price Prediction</h1>
+    <form action="{% url 'result' %}">
+      {% csrf_token %}
+
+      <p>Floor:</p>
+      <input type="text" name="Floor">
+      <br>
+
+      <p>Highest floor of the bulding:</p>
+      <input type="text" name="HighestFloor">
+      <br>
+
+      <p>Area:</p>
+      <input type="text" name="Area">
+      <br>
+
+      <p>Rooms:</p>
+      <select name="Rooms">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+      <br>
+
+      <p>Renovation:</p>
+      <select name="Renovation">
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+      <br>
+
+      <p>Document:</p>
+      <select name="Document">
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+      <br>
+
+      <p>Nearby Subway station:</p>
+      <select name="Subway">
+        <option value="Subway_28 May m.">28 May m.</option>
+        <option value="Subway_8 Noyabr m.">8 Noyabr m.</option>
+        <option value="Subway_Avtovağzal m.">Avtovağzal m.</option>
+        <option value="Subway_Azadlıq Prospekti m.">Azadlıq Prospekti m.</option>
+        <option value="Subway_Bakmil m.">Bakmil m.</option>
+        <option value="Subway_Dərnəgül m.">Dərnəgül m.</option>
+        <option value="Subway_Elmlər Akademiyası m.">Elmlər Akademiyası m.</option>
+        <option value="Subway_Əhmədli m.">Əhmədli m.</option>
+        <option value="Subway_Gənclik m.">Gənclik m.</option>
+        <option value="Subway_Həzi Aslanov m.">Həzi Aslanov m.</option>
+        <option value="Subway_Xalqlar Dostluğu m.">Xalqlar Dostluğu m.</option>
+        <option value="Subway_İçəri Şəhər m.">İçəri Şəhər m.</option>
+        <option value="Subway_İnşaatçılar m.">İnşaatçılar m.</option>
+        <option value="Subway_Koroğlu m.">Koroğlu m.</option>
+        <option value="Subway_Qara Qarayev m.">Qara Qarayev m.</option>
+        <option value="Subway_Memar Əcəmi m.">Memar Əcəmi m.</option>
+        <option value="Subway_Neftçilər m.">Neftçilər m.</option>
+        <option value="Subway_Nizami m.">Nizami m.</option>
+        <option value="Subway_Nəriman Nərimanov m.">Nəriman Nərimanov m.</option>
+        <option value="Subway_Nəsimi m.">Nəsimi m.</option>
+        <option value="Subway_Sahil m.">Sahil m.</option>
+        <option value="Subway_Şah İsmayıl Xətai m.">Şah İsmayıl Xətai m.</option>
+
+        
+      </select>
+      <br>
+
+      <input type="submit" value='Predict'>
+    </form>
+  </body>
+</html>
